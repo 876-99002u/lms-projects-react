@@ -5,5 +5,20 @@
 body{
   margin: auto;
   max-width: 1440px;
+  position: relative;  
+}
+.custom-drawer-bg {
+  background-color: #eeeeee; /* Set the base background color to #eeeeee */
   position: relative;
+}
+
+.custom-drawer-bg::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.6); /* Black overlay with 60% opacity */
+  z-index: -1; /* Ensures the overlay stays behind the content */
 }
